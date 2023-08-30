@@ -1,13 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <meta name="description" content="From studio portraits to epic alpine landscapes, browse the best photography, retouching and photojournalism today."/>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Roboto&display=swap" rel="stylesheet">
-  <style>
 
+<head>
+  <style>
     body {
       background-color: #1c1c1c;
       font-family: 'Roboto', sans-serif;
@@ -44,6 +39,7 @@
       0% {
         transform: rotate(0deg);
       }
+
       100% {
         transform: rotate(360deg);
       }
@@ -56,7 +52,7 @@
     }
 
     .description {
-      color: #FFF;
+      color: #fff;
       font-size: 20px;
       line-height: 1.5;
       max-width: 600px;
@@ -78,23 +74,23 @@
     @keyframes animatebottom {
       from {
         bottom: -100px;
-        opacity: 0
+        opacity: 0;
       }
+
       to {
         bottom: 0;
-        opacity: 1
+        opacity: 1;
       }
     }
   </style>
 </head>
-
 <body>
   <div id="loader"></div>
   <div class="message animate-bottom">
     <p class="description">
-      Please wait a moment. Our servers may be under high load causing some slowness. If you have any issues, please contact me.
+      Please wait a moment. Our servers may be under high load causing some slowness.<br>If you have any issues, please
+      <a class="discord-link" href="https://discord.gg/gointerstellar" target="_blank">join our Discord server</a>.
     </p>
   </div>
 </body>
-
 </html>

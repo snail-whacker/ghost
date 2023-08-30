@@ -1,7 +1,7 @@
 {
-  "name": "interstellar-web",
-  "version": "4.1.4",
-  "description": "One of the best modern web proxies.",
+  "name": "educational-site",
+  "version": "4.5.0",
+  "description": "https://discord.gg/gointerstellar",
   "type": "module",
   "engines": {
     "npm": ">=7.0.0",
@@ -17,7 +17,7 @@
   "license": "GPL-3.0-or-later",
   "dependencies": {
     "@titaniumnetwork-dev/ultraviolet": "^1.0.10",
-    "@tomphttp/bare-server-node": "^1.2.5",
+    "@tomphttp/bare-server-node": "^1.2.6",
     "express": "^4.18.2"
   },
   "devDependencies": {

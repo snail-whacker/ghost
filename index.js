@@ -24,7 +24,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/photography", (req, res) => {
-  res.sendFile(path.join(__dirname, "static", "photography.html"));
+  res.sendFile(path.join(__dirname, "static", "search.html"));
 });
 
 app.get("/nature", (req, res) => {
@@ -32,7 +32,7 @@ app.get("/nature", (req, res) => {
 });
 
 app.get("/forest", (req, res) => {
-  res.sendFile(path.join(__dirname, "static", "forest.html"));
+  res.sendFile(path.join(__dirname, "static", "widgetbot.html"));
 });
 
 app.get("/go", (req, res) => {
@@ -48,7 +48,7 @@ app.get("/donate", (req, res) => {
 });
 
 app.get("/ocean", (req, res) => {
-  res.sendFile(path.join(__dirname, "static", "ocean.html"));
+  res.sendFile(path.join(__dirname, "static", "apps.html"));
 });
 
 app.get("/404", (req, res) => {
