@@ -423,6 +423,38 @@
       </div>
     </div>
   </div>
+<div class="row">
+  <div class="span1">
+    <div class="card animals" loading="lazy">
+      <a class="game" onclick="openCustomWindow()">
+        <img loading="lazy" src="/assets/images/icons/apps/desktopvision.png" style="border-radius: 25px;" />
+      </a>
+      <p3> DV </p3>
+    </div>
+  </div>
+</div>
+
+<script>
+  function openCustomWindow() {
+    var win = window.open();
+    var url = "https://js.desktop.vision/";
+
+    // Create an iframe inside the new window
+    var iframe = document.createElement('iframe');
+    iframe.src = url;
+    iframe.style.width = '100%';
+    iframe.style.height = '100%';
+
+    // Set the initial zoom level to 67%
+    iframe.style.zoom = '67%';
+
+    // Append the iframe to the new window's document
+    if (win) {
+      win.document.body.appendChild(iframe);
+    }
+  }
+</script>
+
   <br>
   <br>
   <link href="assets/images/branding/favicon/interstellar.png" rel="shortcut icon" type="image/x-icon" />
