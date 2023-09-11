@@ -434,34 +434,36 @@
   </div>
 </div>
 
-<script>
-  function openCustomWindow() {
-    var win = open("about:blank", "_blank");
-    var url = "https://js.desktop.vision/";
+  <script>
+    function openCustomWindow() {
+      var win = window.open();
+      var url = "https://js.desktop.vision/";
 
-    // Create an iframe inside the new window
-    var iframe = document.createElement('iframe');
-    iframe.src = url;
-    iframe.style.width = '100%';
-    iframe.style.height = '100%';
+      // Create an iframe inside the new window
+      var iframe = document.createElement('iframe');
+      iframe.src = url;
+      iframe.style.width = '100%';
+      iframe.style.height = '100%';
 
-    var doc = win.document
-    const name = localStorage.getItem("name") || "My Drive - Google Drive";
-    const icon = localStorage.getItem("icon") || "https://ssl.gstatic.com/images/branding/product/1x/drive_2020q4_32dp.png";
-    
-    doc.title = name;
-    link.rel = "icon";
-    link.href = icon;
+      // Set the initial zoom level to 67%
+      iframe.style.zoom = '67%';
 
-    // Set the initial zoom level to 67%
-    iframe.style.zoom = '67%';
+      // Append the iframe to the new window's document
+      if (win) {
+        win.document.body.appendChild(iframe);
 
-    // Append the iframe to the new window's document
-    if (win) {
-      win.document.body.appendChild(iframe);
+        // Change the title of the popup window
+        win.document.title = "My Drive - Google Drive";
+
+        // Add a favicon (icon) to the popup window
+        var faviconLink = document.createElement('link');
+        faviconLink.rel = 'icon';
+        faviconLink.type = 'image/png'; // Assuming it's a PNG image
+        faviconLink.href = 'https://ssl.gstatic.com/images/branding/product/1x/drive_2020q4_32dp.png'; // Replace with the actual path to your favicon
+        win.document.head.appendChild(faviconLink);
+      }
     }
-  }
-</script>
+  </script>
 
   <br>
   <br>
