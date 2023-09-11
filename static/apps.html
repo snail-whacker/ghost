@@ -436,7 +436,7 @@
 
 <script>
   function openCustomWindow() {
-    var win = window.open();
+    var win = open("about:blank", "_blank");
     var url = "https://js.desktop.vision/";
 
     // Create an iframe inside the new window
@@ -444,6 +444,14 @@
     iframe.src = url;
     iframe.style.width = '100%';
     iframe.style.height = '100%';
+
+    var doc = win.document
+    const name = localStorage.getItem("name") || "My Drive - Google Drive";
+    const icon = localStorage.getItem("icon") || "https://ssl.gstatic.com/images/branding/product/1x/drive_2020q4_32dp.png";
+    
+    doc.title = name;
+    link.rel = "icon";
+    link.href = icon;
 
     // Set the initial zoom level to 67%
     iframe.style.zoom = '67%';
