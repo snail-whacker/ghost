@@ -63,6 +63,37 @@
   <!-- Advertisement Start-->
   <!-- Advertisement End-->
   <br>
+
+  <script>
+    function customurl(url) {
+      var win = window.open();
+      // Create an iframe inside the new window
+
+      var iframe = document.createElement('iframe');
+      iframe.src = url;
+      iframe.style.width = '100%';
+      iframe.style.height = '100%';
+
+      // Set the initial zoom level to 67%
+      iframe.style.zoom = '67%';
+
+      // Append the iframe to the new window's document
+      if (win) {
+        win.document.body.appendChild(iframe);
+
+        // Change the title of the popup window
+        win.document.title = "My Drive - Google Drive";
+
+        // Add a favicon (icon) to the popup window
+        var faviconLink = document.createElement('link');
+        faviconLink.rel = 'icon';
+        faviconLink.type = 'image/png'; // Assuming it's a PNG image
+        faviconLink.href = 'https://ssl.gstatic.com/images/branding/product/1x/drive_2020q4_32dp.png'; // Replace with the actual path to your favicon
+        win.document.head.appendChild(faviconLink);
+      }
+    }
+  </script>
+
   <div class="row">
     <div class="span1">
       <div class="card animals" loading="lazy" style="padding-top: 5px;">
@@ -259,45 +290,13 @@
   <div class="row">
     <div class="span1">
       <div class="card animals" loading="lazy">
-        <a class="game" onclick="sm64()">
+        <a class="game" onclick="customurl('https://nudgeit.homeplex.org/')">
           <img loading="lazy" src="/assets/images/icons/sm64.webp" style="border-radius: 25px;" />
         </a>
         <p3> SM64 </p3>
       </div>
     </div>
   </div>
-
-
-  <script>
-    function sm64() {
-      var win = window.open();
-      var url = "https://nudgeit.homeplex.org/";
-
-      // Create an iframe inside the new window
-      var iframe = document.createElement('iframe');
-      iframe.src = url;
-      iframe.style.width = '100%';
-      iframe.style.height = '100%';
-
-      // Set the initial zoom level to 67%
-      iframe.style.zoom = '67%';
-
-      // Append the iframe to the new window's document
-      if (win) {
-        win.document.body.appendChild(iframe);
-
-        // Change the title of the popup window
-        win.document.title = "My Drive - Google Drive";
-
-        // Add a favicon (icon) to the popup window
-        var faviconLink = document.createElement('link');
-        faviconLink.rel = 'icon';
-        faviconLink.type = 'image/png'; // Assuming it's a PNG image
-        faviconLink.href = 'https://ssl.gstatic.com/images/branding/product/1x/drive_2020q4_32dp.png'; // Replace with the actual path to your favicon
-        win.document.head.appendChild(faviconLink);
-      }
-    }
-  </script>
 
   <div class="row">
     <div class="span1">
