@@ -92,6 +92,45 @@
         win.document.head.appendChild(faviconLink);
       }
     }
+
+    var win;
+
+  function EmulateN64(url) {
+      var win;
+      var sourceCode = "<div style='width:640px;height:480px;max-width:100%'>" +
+            "<div id='game'></div>" +
+            "</div>" +
+            "<script type='text/javascript'>" +
+            "EJS_player = '#game';" +
+            "EJS_core = 'n64';" +
+            "EJS_gameUrl = '" + customUrl + "';" +
+            "EJS_pathtodata = 'https://emulatorjs-server.homeplex.org/emu-src/data/';" +
+            "</"+"script>" +
+            "<script src='https://emulatorjs-server.homeplex.org/emu-src/data/loader.js'></"+"script>";
+
+        win = window.open();
+        win.document.write('<html><head><title>EMU-N64</title></head><body>' + sourceCode + '</body></html>');
+        win.document.close();
+      }
+
+  function EmulateDS(url) {
+    var win;
+    var sourceCode = "<div style='width:640px;height:480px;max-width:100%'>" +
+           "<div id='game'></div>" +
+           "</div>" +
+           "<script type='text/javascript'>" +
+           "EJS_player = '#game';" +
+           "EJS_core = 'nds';" +
+           "EJS_biosUrl = 'https://emulatorjs-server.homeplex.org/nds-bios/bios7.bin';" +
+           "EJS_gameUrl = '" + customUrl + "';" +
+           "EJS_pathtodata = 'https://emulatorjs-server.homeplex.org/emu-src/data/';" +
+           "</"+"script>" +
+           "<script src='https://emulatorjs-server.homeplex.org/emu-src/data/loader.js'></"+"script>";
+
+    win = window.open();
+    win.document.write('<html><head><title>EMU-DS</title></head><body>' + sourceCode + '</body></html>');
+    win.document.close();
+  }
   </script>
 
   <div class="row">
@@ -301,7 +340,7 @@
   <div class="row">
     <div class="span1">
       <div class="card animals" loading="lazy">
-        <a class="game" onclick="customurl('https://emu-js.homeplex.org/mario-kart-ds.html')">
+        <a class="game" onclick="EmulateDS('https://emulatorjs-server.homeplex.org/games/Mario%20Kart%20DS%20%28USA%2C%20Australia%29%20%28En%2CFr%2CDe%2CEs%2CIt%29.nds')">
           <img loading="lazy" src="/assets/images/icons/mkds.jpg" style="border-radius: 25px;" />
         </a>
         <p3> Mario Kart DS </p3>
@@ -312,7 +351,7 @@
   <div class="row">
     <div class="span1">
       <div class="card animals" loading="lazy">
-        <a class="game" onclick="customurl('https://emu-js.homeplex.org/new-super-mario-bros.html')">
+        <a class="game" onclick="EmulateDS('https://emulatorjs-server.homeplex.org/games/New%20Super%20Mario%20Bros.%20%28USA%2C%20Australia%29.nds')">
           <img loading="lazy" src="/assets/images/icons/nsmb.jpg" style="border-radius: 25px;" />
         </a>
         <p3> New Super Mario Bros DS </p3>
