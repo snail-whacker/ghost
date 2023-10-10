@@ -8,7 +8,6 @@ try {
 
 // Cloaking Code
 
-/*
 if (!inFrame && !navigator.userAgent.includes("Firefox")) {
     const popup = open("about:blank", "_blank")
     if (!popup || popup.closed) {
@@ -38,22 +37,3 @@ if (!inFrame && !navigator.userAgent.includes("Firefox")) {
         location.replace("https://classroom.google.com")
     }
 }
-*/
-
-let w = window.open();
-if (!w || w?.closed) {
-  alert("Allow popups and redirects to hide this from showing up in your history.")
-  location.replace("https://classroom.google.com")
-  return
-}
-
-w.document.write(`
-  <head>
-    <link rel ='icon' hreef=${localStorage.icon || ''}' type='image/x-icon'>
-    <title>${localStorage.title || '404'}</title>
-  </head>
-  <body style='margin: 0;'>
-    <iframe style='border:none; width:100%; height:100%;' src='${location.href}'></iframe>
-  </body>
-`);
-location.href = "https://classroom.google.com"
