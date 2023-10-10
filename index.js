@@ -77,9 +77,9 @@ server.on("upgrade", (req, socket, head) => {
 });
 
 server.on("listening", () => {
-  console.log(`Interstellar running at http://localhost:8080`);
+  console.log(`Interstellar running at http://localhost:${process.env.PORT}`);
 });
 
 server.listen({
-  port: 8080,
+  port: process.env.PORT,
 });
