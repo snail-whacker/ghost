@@ -1,6 +1,6 @@
 
   services:
   - type: web
-    name: ghost
+    name: interstellar
     env: docker
     plan: free
