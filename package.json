@@ -1,7 +1,7 @@
 {
-  "name": "educational-site",
+  "name": "ecommerce",
   "version": "4.5.0",
-  "description": "https://discord.gg/gointerstellar",
+  "description": "ANON.",
   "type": "module",
   "engines": {
     "npm": ">=7.0.0",
@@ -11,13 +11,13 @@
     "start": "node index.js"
   },
   "keywords": [
-    "proxy"
+    "education"
   ],
   "author": "",
   "license": "GPL-3.0-or-later",
   "dependencies": {
-    "@titaniumnetwork-dev/ultraviolet": "^1.0.10",
-    "@tomphttp/bare-server-node": "^1.2.6",
+    "ultraviolet-clone": "^1.0.10",
+    "bare-server-node": "^1.2.6",
     "express": "^4.18.2"
   },
   "devDependencies": {
