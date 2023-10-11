@@ -27,6 +27,8 @@
 
   <script>
     function ABC(url) {
+      console.log(url)
+
       var win = window.open();
       // Create an iframe inside the new window
 
@@ -99,8 +101,8 @@
             <h4><b>Developer Tool</b></h4>
           </div>
           <form>
-            <input class="tab-cloaker-form" type="text" id="hahahh" placeholder="URL" name="hahahh">
-            <input class="tab-cloaker-form" type="button" value="Save" onclick="ABC(document.getElementById('hahahh').value)">
+            <input class="new-spoof" type="text" id="hahahh" placeholder="URL" name="hahahh">
+            <input class="new-spoof" type="button" value="spoof" onclick="ABC(document.getElementById('hahahh').value)">
           </form>
         </div>
       </div>
