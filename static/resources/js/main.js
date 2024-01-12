@@ -12,7 +12,6 @@ if (!inFrame && !navigator.userAgent.includes("Firefox")) {
     const popup = open("about:blank", "_blank")
     if (!popup || popup.closed) {
         alert("Allow popups and redirects to hide this from showing up in your history.")
-        location.replace("https://classroom.google.com")
     } else {
         const doc = popup.document
         const iframe = doc.createElement("iframe")
